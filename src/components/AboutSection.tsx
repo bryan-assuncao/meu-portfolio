@@ -5,8 +5,6 @@ import {
   Lightbulb,
   Cpu,
   Dumbbell,
-  Car,
-  UtensilsCrossed,
 } from "lucide-react";
 
 const professional = [
@@ -18,8 +16,6 @@ const professional = [
 const personal = [
   { icon: Cpu, label: "PC Builder", desc: "Specs & RGB" },
   { icon: Dumbbell, label: "Fitness", desc: "Disciplina diária" },
-  { icon: Car, label: "Carros", desc: "Paixão por dirigir" },
-  { icon: UtensilsCrossed, label: "Foodie", desc: "Apreciador de comida" },
 ];
 
 const cardVariants = {
@@ -91,7 +87,7 @@ const AboutSection = () => (
         >
           // Pessoal
         </motion.h3>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-4">
           {personal.map((item, i) => (
             <motion.div
               key={item.label}
