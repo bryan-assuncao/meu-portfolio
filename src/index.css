@@ -70,6 +70,15 @@
 }
 
 @layer components {
+  @keyframes rgb-led-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 300% 50%;
+    }
+  }
+
   .glass-card {
     @apply bg-card/40 backdrop-blur-xl border border-border/50 rounded-xl;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -89,7 +98,27 @@
 
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--neon-purple)), hsl(var(--neon-blue)), hsl(var(--neon-green)));
+    background-image: linear-gradient(
+      90deg,
+      #ff2d55 0%,
+      #ff8a00 16%,
+      #ffe600 32%,
+      #00ff85 48%,
+      #00d4ff 64%,
+      #7a5cff 80%,
+      #ff2d55 100%
+    );
+    background-size: 300% 100%;
+    background-repeat: repeat;
+    animation: rgb-led-flow 8s linear infinite;
+    will-change: background-position;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gradient-text {
+      animation: none;
+      background-position: 50% 50%;
+    }
   }
 
   .gradient-border {

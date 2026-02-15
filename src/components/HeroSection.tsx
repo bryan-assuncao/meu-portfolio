@@ -22,7 +22,7 @@ const HeroSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="font-body text-sm md:text-base tracking-[0.3em] uppercase text-muted-foreground mb-6">
-            Bryan — Desenvolvedor Mobile
+            Bryan Assunção — Desenvolvedor Mobile
           </p>
         </motion.div>
 
@@ -43,8 +43,7 @@ const HeroSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
         >
-          Desenvolvedor React Native Proativo &bull; PC Builder &bull; Obsessão por Tech
-        </motion.p>
+          Desenvolvedor movido pela paixão por tecnologia e inovação.        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,9 +52,11 @@ const HeroSection = () => {
         >
           <button
             onClick={scrollToProjects}
-            className="glow-button text-primary-foreground text-sm md:text-base"
+            className="gradient-border bg-black/80 backdrop-blur-sm px-8 py-4 rounded-lg transition-all duration-300 hover:shadow-[0_0_30px_hsl(var(--neon-purple)/0.3)] hover:scale-105 group"
           >
-            Ver Projetos
+            <span className="font-display font-semibold tracking-wider uppercase text-sm md:text-base gradient-text group-hover:brightness-125 transition-all">
+              Ver Projetos
+            </span>
           </button>
         </motion.div>
       </div>

@@ -6,18 +6,33 @@ import {
   Cpu,
   Dumbbell,
   User,
+  Workflow,
 } from "lucide-react";
+
+const N8nIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    stroke="none"
+    {...props}
+  >
+    <path d="M12.793 1.157L7.432 4.25v6.18l5.361 3.095 5.361-3.095V4.25l-5.361-3.093zM5.96 5.1v6.18L.6 14.375V8.195L5.96 5.101zm1.472 6.18v6.184l5.361 3.093 5.361-3.093v-6.184l-5.361 3.093-5.361-3.093z" />
+  </svg>
+);
 
 const professional = [
   { icon: Smartphone, label: "Dev Mobile", desc: "React Native" },
   { icon: Video, label: "Edição de Vídeo", desc: "Conteúdo criativo" },
-  { icon: Lightbulb, label: "Proativo", desc: "Resolução de problemas" },
+  { icon: N8nIcon, label: "Automação", desc: "n8n" },
 ];
 
 const personal = [
   { icon: Cpu, label: "PC Builder", desc: "Specs & RGB" },
   { icon: Dumbbell, label: "Fitness", desc: "Disciplina diária" },
 ];
+
+const profilePhotoPath = "/profile.jpg";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
@@ -55,8 +70,16 @@ const AboutSection = () => (
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
-        {/* Photo placeholder — troque o src pela sua foto */}
-        <div className="shrink-0 w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border bg-muted flex items-center justify-center neon-glow-purple">
+        {/* Coloque sua foto em /public/profile.jpg ou altere o caminho em profilePhotoPath */}
+        <div className="relative shrink-0 w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border bg-muted flex items-center justify-center neon-glow-purple">
+          <img
+            src={profilePhotoPath}
+            alt="Foto de Bryan Assunção"
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={(event) => {
+              event.currentTarget.style.display = "none";
+            }}
+          />
           <User className="w-20 h-20 text-muted-foreground" />
         </div>
 
@@ -65,7 +88,7 @@ const AboutSection = () => (
             Bryan <span className="gradient-text">Assunção</span>
           </h3>
           <p className="text-muted-foreground font-body leading-relaxed text-sm md:text-base max-w-xl">
-            Desenvolvedor Mobile focado em React Native, apaixonado por
+            Desenvolvedor Mobile React Native, apaixonado por
             tecnologia, hardware e inovação. Sempre buscando evoluir — tanto no
             código quanto na vida. Quando não estou programando, estou montando
             PCs, treinando na academia ou explorando novas tecnologias.

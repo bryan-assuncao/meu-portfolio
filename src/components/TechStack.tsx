@@ -19,6 +19,10 @@ const techs = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
   },
   {
+    name: "IA",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg",
+  },
+  {
     name: "Java",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
   },
@@ -41,7 +45,7 @@ const techs = [
 ];
 
 const TechStack = () => (
-  <section className="py-24 md:py-32 px-4">
+  <section id="tech" className="py-24 md:py-32 px-4">
     <div className="max-w-4xl mx-auto text-center">
       <motion.h2
         className="font-display text-3xl md:text-4xl font-bold mb-4"
