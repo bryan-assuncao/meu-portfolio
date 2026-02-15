@@ -5,6 +5,7 @@ import {
   Lightbulb,
   Cpu,
   Dumbbell,
+  User,
 } from "lucide-react";
 
 const professional = [
@@ -46,6 +47,32 @@ const AboutSection = () => (
         </p>
       </motion.div>
 
+      {/* Photo + Bio */}
+      <motion.div
+        className="glass-card gradient-border p-6 md:p-10 mb-16 flex flex-col md:flex-row items-center gap-8"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        {/* Photo placeholder — troque o src pela sua foto */}
+        <div className="shrink-0 w-40 h-40 md:w-52 md:h-52 rounded-2xl overflow-hidden border-2 border-border bg-muted flex items-center justify-center neon-glow-purple">
+          <User className="w-20 h-20 text-muted-foreground" />
+        </div>
+
+        <div className="text-center md:text-left">
+          <h3 className="font-display text-xl md:text-2xl font-bold text-foreground mb-3">
+            Bryan <span className="gradient-text">Assunção</span>
+          </h3>
+          <p className="text-muted-foreground font-body leading-relaxed text-sm md:text-base max-w-xl">
+            Desenvolvedor Mobile focado em React Native, apaixonado por
+            tecnologia, hardware e inovação. Sempre buscando evoluir — tanto no
+            código quanto na vida. Quando não estou programando, estou montando
+            PCs, treinando na academia ou explorando novas tecnologias.
+          </p>
+        </div>
+      </motion.div>
+
       {/* Professional */}
       <div className="mb-12">
         <motion.h3
@@ -67,7 +94,7 @@ const AboutSection = () => (
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <item.icon className="w-8 h-8 text-neon-purple mb-4 group-hover:drop-shadow-[0_0_8px_hsl(270,100%,65%)] transition-all duration-300" />
+              <item.icon className="w-8 h-8 text-neon-purple mb-4 group-hover:drop-shadow-[0_0_8px_hsl(270,100%,75%)] transition-all duration-300" />
               <h4 className="font-display text-sm font-semibold text-foreground mb-1">
                 {item.label}
               </h4>
@@ -98,7 +125,7 @@ const AboutSection = () => (
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <item.icon className="w-8 h-8 text-neon-green mb-4 group-hover:drop-shadow-[0_0_8px_hsl(145,100%,45%)] transition-all duration-300" />
+              <item.icon className="w-8 h-8 text-neon-green mb-4 group-hover:drop-shadow-[0_0_8px_hsl(145,100%,55%)] transition-all duration-300" />
               <h4 className="font-display text-xs font-semibold text-foreground mb-1">
                 {item.label}
               </h4>
