@@ -25,7 +25,6 @@ export default defineConfig(() => {
               if (id.includes("framer-motion")) return "vendor-framer";
               if (id.includes("lucide-react")) return "vendor-icons";
               if (id.includes("@radix-ui")) return "vendor-ui";
-              if (id.includes("react")) return "vendor-react";
 
               return "vendor";
             }
