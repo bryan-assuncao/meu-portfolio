@@ -32,7 +32,7 @@ const personal = [
   { icon: Dumbbell, label: "Fitness", desc: "Disciplina diária" },
 ];
 
-const profilePhotoPath = "/profile.jpg";
+const profilePhotoPath = `${import.meta.env.BASE_URL}profile.jpg`;
 
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
