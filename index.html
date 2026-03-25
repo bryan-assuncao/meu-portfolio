@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./favicon-192x192.png" />
     <title>Bryan Assunção | Portfólio</title>
     <meta
       name="description"
-      content="Portfólio de Bryan Assunção — Desenvolvedor Mobile React Native apaixonado por tecnologia, hardware e inovação."
+      content="Portfólio de Bryan Assunção — Full Stack & Mobile Developer apaixonado por tecnologia, hardware e inovação."
     />
     <meta name="author" content="Bryan Assunção" />
 
@@ -36,13 +38,15 @@
           <span class="brand-angle">/&gt;</span>
         </a>
 
-        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu">
-          Menu
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
         </button>
 
         <nav class="desktop-nav" aria-label="Navegação principal">
           <a href="#about" data-scroll-target="about">Sobre</a>
-          <a href="#projects" data-scroll-target="projects">Projetos</a>
+          <a href="#experience" data-scroll-target="experience">Experiência</a>
           <a href="#tech" data-scroll-target="tech">Tech Stack</a>
           <a href="#contact" data-scroll-target="contact">Contato</a>
         </nav>
@@ -63,7 +67,7 @@
         <div class="orb orb-blue"></div>
 
         <div class="container hero-content">
-          <p class="hero-subtitle">Bryan Assunção — Desenvolvedor Mobile</p>
+          <p class="hero-subtitle">Bryan Assunção — Full Stack & Mobile Developer</p>
           <h1>
             <span class="gradient-text">Código, Hardware</span><br />
             <span>e Inovação</span>
@@ -71,8 +75,8 @@
           <p class="hero-text">
             Desenvolvedor movido pela paixão por tecnologia e inovação.
           </p>
-          <button class="hero-button gradient-border" data-scroll-target="projects">
-            Ver Projetos
+          <button class="hero-button gradient-border" data-scroll-target="experience">
+            Ver Experiência
           </button>
         </div>
       </section>
@@ -91,7 +95,7 @@
             <div>
               <h3>Bryan <span class="gradient-text">Assunção</span></h3>
               <p>
-                Desenvolvedor Mobile React Native, apaixonado por tecnologia,
+                Full Stack & Mobile Developer, apaixonado por tecnologia,
                 hardware e inovação. Sempre buscando evoluir — tanto no código
                 quanto na vida. Quando não estou programando, estou montando PCs,
                 treinando na academia ou explorando novas tecnologias.
@@ -102,8 +106,8 @@
           <h3 class="category category-purple">// Profissional</h3>
           <div class="card-grid card-grid-3">
             <article class="glass-card gradient-border info-card">
-              <h4>Dev Mobile</h4>
-              <p>React Native</p>
+              <h4>Dev Full Stack & Mobile</h4>
+              <p>JS, TypeScript, React Native e Node.js</p>
             </article>
             <article class="glass-card gradient-border info-card">
               <h4>Edição de Vídeo</h4>
@@ -119,7 +123,7 @@
           <div class="card-grid card-grid-2">
             <article class="glass-card gradient-border info-card">
               <h4>PC Builder</h4>
-              <p>Specs & RGB</p>
+              <p>Hardware & RGB</p>
             </article>
             <article class="glass-card gradient-border info-card">
               <h4>Fitness</h4>
@@ -129,37 +133,54 @@
         </div>
       </section>
 
-      <section id="projects" class="section">
+      <section id="experience" class="section">
         <div class="container">
           <div class="section-head">
-            <h2>Meus <span class="gradient-text">Projetos</span></h2>
-            <p>Alguns dos projetos que construí explorando diferentes tecnologias.</p>
+            <h2>Minha <span class="gradient-text">Experiência</span></h2>
+            <p>Onde venho aplicando minhas habilidades e crescendo como desenvolvedor.</p>
           </div>
 
-          <div class="card-grid card-grid-2">
-            <a class="glass-card gradient-border project-card" href="https://github.com/bryan-assuncao/buscador-de-series-spring" target="_blank" rel="noopener noreferrer">
-              <h3>Buscador de Séries</h3>
-              <p>Aplicação Spring Boot para buscar e catalogar séries de TV via API.</p>
-              <div class="tags"><span>Java</span><span>Spring Boot</span></div>
-            </a>
+          <div class="experience-timeline">
+            <article class="glass-card gradient-border experience-card">
+              <div class="experience-header">
+                <div>
+                  <h3>Full Stack & Mobile Developer</h3>
+                  <p class="experience-company">Blix - Soluções em Tecnologia</p>
+                </div>
+                <span class="experience-badge experience-badge-active">Atual</span>
+              </div>
+              <p class="experience-meta">Nov 2025 — Presente · Remoto</p>
+              <ul class="experience-list">
+                <li>Desenvolvimento de aplicações mobile iOS e Android com React Native, atuando desde a implementação até testes e melhorias contínuas</li>
+                <li>Backend e integrações com desenvolvimento de APIs em Node.js, automações com N8N e integração com Firebase (Auth, Firestore, Cloud Functions)</li>
+                <li>Utilização de AWS e Google Cloud Platform (GCP) para infraestrutura, autenticação, armazenamento e escalabilidade</li>
+                <li>Build, versionamento e publicação de aplicativos na Google Play Store e Apple App Store</li>
+                <li>Desenvolvimento de novas funcionalidades e correção de bugs, garantindo estabilidade e performance</li>
+              </ul>
+              <div class="tags">
+                <span>React Native</span><span>Node.js</span><span>Firebase</span><span>AWS</span><span>GCP</span><span>N8N</span><span>Expo</span>
+              </div>
+            </article>
 
-            <a class="glass-card gradient-border project-card" href="https://github.com/bryan-assuncao/sistema-de-vendas" target="_blank" rel="noopener noreferrer">
-              <h3>Sistema de Vendas</h3>
-              <p>Sistema completo de gerenciamento de vendas com controle de estoque.</p>
-              <div class="tags"><span>C#</span><span>.NET</span></div>
-            </a>
-
-            <a class="glass-card gradient-border project-card" href="https://github.com/bryan-assuncao/chatbot-local-icpbrasil" target="_blank" rel="noopener noreferrer">
-              <h3>Chatbot ICP-Brasil</h3>
-              <p>Chatbot local com IA para responder dúvidas sobre certificação digital ICP-Brasil.</p>
-              <div class="tags"><span>Python</span><span>IA</span></div>
-            </a>
-
-            <a class="glass-card gradient-border project-card" href="https://github.com/bryan-assuncao/game-master-ai" target="_blank" rel="noopener noreferrer">
-              <h3>Game Master AI</h3>
-              <p>IA que atua como mestre de RPG, gerando narrativas e aventuras interativas.</p>
-              <div class="tags"><span>Python</span><span>IA</span></div>
-            </a>
+            <article class="glass-card gradient-border experience-card">
+              <div class="experience-header">
+                <div>
+                  <h3>AI Intern</h3>
+                  <p class="experience-company">Safeweb Segurança da Informação</p>
+                </div>
+                <span class="experience-badge">Concluído</span>
+              </div>
+              <p class="experience-meta">Mar 2025 — Nov 2025 · 9 meses · Porto Alegre, RS</p>
+              <ul class="experience-list">
+                <li>Desenvolvimento e implementação de Agentes Inteligentes e LLMs para automação de processos críticos com Python, N8N, Copilot Studio, Power Automate, Ollama, LlamaIndex e Hugging Face</li>
+                <li>Chatbots inteligentes aplicando técnicas como RAG, LLMs, Embeddings e Chunking com Ollama</li>
+                <li>Construção de APIs RESTful com Flask para integrar modelos de IA a uma arquitetura de microsserviços</li>
+                <li>Testes unitários e manipulação de dados com Pandas, garantindo qualidade e performance dos algoritmos</li>
+              </ul>
+              <div class="tags">
+                <span>Python</span><span>Flask</span><span>SQL Server</span><span>LLMs</span><span>RAG</span><span>Ollama</span><span>N8N</span><span>Pandas</span>
+              </div>
+            </article>
           </div>
         </div>
       </section>

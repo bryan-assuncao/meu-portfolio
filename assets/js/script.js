@@ -10,7 +10,7 @@ const revealSelectors = [
   '.section-head',
   '.bio-card',
   '.info-card',
-  '.project-card',
+  '.experience-card',
   '.tech-card',
   '.hardware-badge',
   '.footer h2',
