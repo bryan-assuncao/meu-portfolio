@@ -509,6 +509,22 @@ h6,
   color: var(--neon-blue);
 }
 
+.experience-linkedin-link {
+  display: block;
+  text-align: center;
+  margin-top: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--neon-blue);
+  transition: color 0.25s ease, text-shadow 0.25s ease;
+}
+
+.experience-linkedin-link:hover {
+  color: #5b9aff;
+  text-shadow: 0 0 14px hsl(200 100% 60% / 0.4);
+}
+
 .tech-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
