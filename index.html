@@ -45,17 +45,17 @@
         </button>
 
         <nav class="desktop-nav" aria-label="Navegação principal">
-          <a href="#about" data-scroll-target="about">Sobre</a>
           <a href="#experience" data-scroll-target="experience">Experiência</a>
           <a href="#tech" data-scroll-target="tech">Tech Stack</a>
+          <a href="#about" data-scroll-target="about">Sobre</a>
           <a href="#contact" data-scroll-target="contact">Contato</a>
         </nav>
       </div>
 
       <nav class="mobile-nav" id="mobileMenu" aria-label="Navegação móvel">
-        <a href="#about" data-scroll-target="about">Sobre</a>
-        <a href="#projects" data-scroll-target="projects">Projetos</a>
+        <a href="#experience" data-scroll-target="experience">Experiência</a>
         <a href="#tech" data-scroll-target="tech">Tech Stack</a>
+        <a href="#about" data-scroll-target="about">Sobre</a>
         <a href="#contact" data-scroll-target="contact">Contato</a>
       </nav>
     </header>
@@ -65,89 +65,88 @@
         <div class="overlay"></div>
         <div class="orb orb-purple"></div>
         <div class="orb orb-blue"></div>
+        <div class="orb orb-green"></div>
+        <div class="scanline" aria-hidden="true"></div>
 
         <div class="container hero-content">
-          <p class="hero-subtitle">Bryan Assunção — Full Stack & Mobile Developer</p>
-          <h1>
-            <span class="gradient-text">Código, Hardware</span><br />
-            <span>e Inovação</span>
-          </h1>
-          <p class="hero-text">
-            Desenvolvedor movido pela paixão por tecnologia e inovação.
-          </p>
-          <button class="hero-button gradient-border" data-scroll-target="experience">
-            Ver Experiência
-          </button>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-head">
-            <h2>O <span class="gradient-text">Hardware</span> e o <span class="gradient-text">Software</span></h2>
-            <p>A dualidade entre o profissional focado e o entusiasta de tecnologia.</p>
-          </div>
-
-          <article class="glass-card gradient-border bio-card">
-            <div class="profile-image-wrap">
-              <img id="profileImage" src="./assets/img/profile.webp" alt="Foto de Bryan Assunção" />
-            </div>
-            <div>
-              <h3>Bryan <span class="gradient-text">Assunção</span></h3>
-              <p>
-                Full Stack & Mobile Developer, apaixonado por tecnologia,
-                hardware e inovação. Sempre buscando evoluir — tanto no código
-                quanto na vida. Quando não estou programando, estou montando PCs,
-                treinando na academia ou explorando novas tecnologias.
+          <div class="hero-grid">
+            <div class="hero-text-col">
+              <p class="hero-subtitle">Bryan Assunção — Full Stack &amp; Mobile Developer</p>
+              <h1>
+                <span class="gradient-text">Construo</span> apps.<br />
+                <span class="gradient-text">Monto</span> máquinas.<br />
+                <span class="gradient-text">Quebro</span> código<br />
+                no caminho.
+              </h1>
+              <p class="hero-text">
+                Hoje trabalho com React Native, Node.js, automações com n8n e IA, além de algumas soluções em nuvem utilizando AWS e GCP.
               </p>
+              <div class="hero-actions">
+                <button class="hero-button gradient-border" data-scroll-target="experience">
+                  Ver Experiência
+                </button>
+                <button class="hero-button-ghost" data-scroll-target="contact">
+                  Entrar em contato <span aria-hidden="true">→</span>
+                </button>
+              </div>
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <span class="hero-stat-value">2+</span>
+                  <span class="hero-stat-label">Anos de código</span>
+                </div>
+                <div class="hero-stat">
+                  <span class="hero-stat-value">10+</span>
+                  <span class="hero-stat-label">Tecnologias</span>
+                </div>
+              </div>
             </div>
-          </article>
 
-          <h3 class="category category-purple">// Profissional</h3>
-          <div class="card-grid card-grid-3">
-            <article class="glass-card gradient-border info-card">
-              <h4>Dev Full Stack & Mobile</h4>
-              <p>JS, TypeScript, React Native e Node.js</p>
-            </article>
-            <article class="glass-card gradient-border info-card">
-              <h4>Edição de Vídeo</h4>
-              <p>Conteúdo criativo</p>
-            </article>
-            <article class="glass-card gradient-border info-card">
-              <h4>Automação</h4>
-              <p>N8N, Node.js e Python</p>
-            </article>
-          </div>
-
-          <h3 class="category category-green">// Pessoal</h3>
-          <div class="card-grid card-grid-2">
-            <article class="glass-card gradient-border info-card">
-              <h4>PC Builder</h4>
-              <p>Hardware & RGB</p>
-            </article>
-            <article class="glass-card gradient-border info-card">
-              <h4>Fitness</h4>
-              <p>Disciplina diária</p>
-            </article>
+            <aside class="hero-terminal-col" aria-hidden="true">
+              <div class="terminal">
+                <div class="terminal-bar">
+                  <span class="terminal-dot dot-red"></span>
+                  <span class="terminal-dot dot-yellow"></span>
+                  <span class="terminal-dot dot-green"></span>
+                  <span class="terminal-title">~ / bryan / profile.ts</span>
+                </div>
+                <pre class="terminal-body"><code><span class="t-comment">// quem está por trás do código</span>
+<span class="t-key">const</span> <span class="t-var">bryan</span> = {
+  <span class="t-prop">role</span>:    <span class="t-str">"Full Stack &amp; Mobile Dev"</span>,
+  <span class="t-prop">stack</span>:   [<span class="t-str">"React Native"</span>, <span class="t-str">"Node.js"</span>, <span class="t-str">"TypeScript1"</span>],
+  <span class="t-prop">cloud</span>:   [<span class="t-str">"AWS"</span>, <span class="t-str">"GCP"</span>, <span class="t-str">"Firebase"</span>],
+  <span class="t-prop">focus</span>:   <span class="t-str">"IA, automação &amp; mobile"</span>,
+  <span class="t-prop">passion</span>: <span class="t-str">"hardware + software"</span>,
+  <span class="t-prop">status</span>:  <span class="t-str">"online"</span> <span class="t-cursor">▍</span>
+};</code></pre>
+              </div>
+            </aside>
           </div>
         </div>
+
+        <a class="hero-scroll" href="#experience" data-scroll-target="experience" aria-label="Rolar para experiência">
+          <span class="hero-scroll-label">scroll</span>
+          <span class="hero-scroll-line"></span>
+        </a>
       </section>
 
       <section id="experience" class="section">
         <div class="container">
           <div class="section-head">
+            <span class="section-eyebrow">/ 01 — Trajetória</span>
             <h2>Minha <span class="gradient-text">Experiência</span></h2>
             <p>Onde venho aplicando minhas habilidades e crescendo como desenvolvedor.</p>
           </div>
 
           <div class="experience-timeline">
-            <article class="glass-card gradient-border experience-card">
+            <article class="glass-card gradient-border experience-card experience-card-active">
               <div class="experience-header">
                 <div>
-                  <h3>Full Stack & Mobile Developer</h3>
+                  <h3>Full Stack &amp; Mobile Developer</h3>
                   <p class="experience-company">Blix - Soluções em Tecnologia</p>
                 </div>
-                <span class="experience-badge experience-badge-active">Atual</span>
+                <span class="experience-badge experience-badge-active">
+                  <span class="badge-dot"></span> Atual
+                </span>
               </div>
               <p class="experience-meta">Nov 2025 — Presente · Remoto</p>
               <ul class="experience-list">
@@ -192,6 +191,7 @@
       <section id="tech" class="section">
         <div class="container center">
           <div class="section-head">
+            <span class="section-eyebrow">/ 02 — Toolkit</span>
             <h2>Minha <span class="gradient-text">Stack</span></h2>
             <p>As tecnologias que uso para transformar ideias em realidade.</p>
           </div>
@@ -215,10 +215,124 @@
           </div>
         </div>
       </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head">
+            <span class="section-eyebrow">/ 03 — Sobre mim</span>
+            <h2>O <span class="gradient-text">Hardware</span> e o <span class="gradient-text">Software</span></h2>
+            <p>A dualidade entre o profissional focado e o entusiasta de tecnologia.</p>
+          </div>
+
+          <article class="glass-card gradient-border bio-card">
+            <div class="profile-image-wrap">
+              <img id="profileImage" src="./assets/img/profile.webp" alt="Foto de Bryan Assunção" />
+            </div>
+            <div class="bio-content">
+              <h3>Bryan <span class="gradient-text">Assunção</span></h3>
+              <p>
+                Desenvolvedor Full Stack &amp; Mobile. Gosto de criar soluções que resolvem problemas de verdade e estou sempre aprendendo algo novo. Fora do trabalho, curto montar PCs, treinar na academia e acompanhar as novidades do mundo da tecnologia.
+
+              </p>
+              <div class="bio-meta">
+                <span class="bio-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  Porto Alegre, RS
+                </span>
+                <span class="bio-meta-item">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M2 12h20"></path>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                  Remoto · Global
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <h3 class="category category-purple">// Profissional</h3>
+          <div class="card-grid card-grid-3">
+            <article class="glass-card gradient-border info-card">
+              <div class="info-card-icon icon-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h4>Dev Full Stack &amp; Mobile</h4>
+              <p>JS, TypeScript, React Native e Node.js</p>
+            </article>
+            <article class="glass-card gradient-border info-card">
+              <div class="info-card-icon icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+              </div>
+              <h4>Edição de Vídeo</h4>
+              <p>Conteúdo criativo e narrativa visual</p>
+            </article>
+            <article class="glass-card gradient-border info-card">
+              <div class="info-card-icon icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+              </div>
+              <h4>Automação</h4>
+              <p>N8N, Node.js e Python</p>
+            </article>
+          </div>
+
+          <h3 class="category category-green">// Pessoal</h3>
+          <div class="card-grid card-grid-2">
+            <article class="glass-card gradient-border info-card">
+              <div class="info-card-icon icon-pink">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="2" x2="9" y2="4"></line>
+                  <line x1="15" y1="2" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="22"></line>
+                  <line x1="15" y1="20" x2="15" y2="22"></line>
+                  <line x1="20" y1="9" x2="22" y2="9"></line>
+                  <line x1="20" y1="14" x2="22" y2="14"></line>
+                  <line x1="2" y1="9" x2="4" y2="9"></line>
+                  <line x1="2" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <h4>PC Builder</h4>
+              <p>Hardware, refrigeração &amp; RGB</p>
+            </article>
+            <article class="glass-card gradient-border info-card">
+              <div class="info-card-icon icon-green">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M6.5 6.5 17.5 17.5"></path>
+                  <path d="M21 21l-1-1"></path>
+                  <path d="M3 3l1 1"></path>
+                  <path d="m18 22 4-4"></path>
+                  <path d="m2 6 4-4"></path>
+                  <path d="m3 10 7-7"></path>
+                  <path d="m14 21 7-7"></path>
+                </svg>
+              </div>
+              <h4>Fitness</h4>
+              <p>Disciplina diária e foco</p>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <div class="section-divider" aria-hidden="true"></div>
 
     <footer id="contact" class="footer">
       <div class="container center">
+        <span class="section-eyebrow">/ 04 — Contato</span>
         <h2>Vamos <span class="gradient-text">Conectar</span></h2>
         <p class="footer-text">Aberto a novas oportunidades e projetos desafiadores.</p>
 

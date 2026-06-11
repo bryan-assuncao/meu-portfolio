@@ -6,7 +6,6 @@ const currentYear = document.getElementById('currentYear');
 const profileImage = document.getElementById('profileImage');
 
 const revealSelectors = [
-  '.hero-content',
   '.section-head',
   '.bio-card',
   '.info-card',
