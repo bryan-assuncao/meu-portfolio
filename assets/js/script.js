@@ -10,6 +10,7 @@ const revealSelectors = [
   '.bio-card',
   '.info-card',
   '.experience-card',
+  '.project-card',
   '.tech-card',
   '.hardware-badge',
   '.footer h2',
