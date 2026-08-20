@@ -1072,6 +1072,62 @@ h6,
   padding-bottom: 6rem;
 }
 
+/* Clima do hero continuado pelo resto da pagina. Cada glow e estatico
+   (pintado uma vez, sem custo por frame) e fica contido na sua secao,
+   zerando antes das bordas - por isso nao aparece emenda entre elas. */
+
+#experience {
+  background:
+    radial-gradient(
+      ellipse 75% 40% at 8% 48%,
+      hsl(270 100% 45% / 0.14),
+      hsl(270 100% 45% / 0.056) 45%,
+      hsl(270 100% 45% / 0) 72%
+    );
+}
+
+#projects {
+  background:
+    radial-gradient(
+      ellipse 72% 38% at 92% 44%,
+      hsl(200 100% 45% / 0.13),
+      hsl(200 100% 45% / 0.052) 45%,
+      hsl(200 100% 45% / 0) 72%
+    ),
+    radial-gradient(
+      ellipse 62% 32% at 12% 72%,
+      hsl(270 100% 45% / 0.09),
+      hsl(270 100% 45% / 0.036) 45%,
+      hsl(270 100% 45% / 0) 72%
+    );
+}
+
+#tech {
+  background:
+    radial-gradient(
+      ellipse 78% 42% at 10% 50%,
+      hsl(270 100% 45% / 0.13),
+      hsl(270 100% 45% / 0.052) 45%,
+      hsl(270 100% 45% / 0) 72%
+    );
+}
+
+#about {
+  background:
+    radial-gradient(
+      ellipse 66% 34% at 90% 38%,
+      hsl(145 100% 40% / 0.075),
+      hsl(145 100% 40% / 0.03) 45%,
+      hsl(145 100% 40% / 0) 72%
+    ),
+    radial-gradient(
+      ellipse 70% 36% at 8% 70%,
+      hsl(270 100% 45% / 0.11),
+      hsl(270 100% 45% / 0.044) 45%,
+      hsl(270 100% 45% / 0) 72%
+    );
+}
+
 .section-head {
   text-align: center;
   margin-bottom: 3rem;
@@ -1588,7 +1644,8 @@ h6,
   padding: 5rem 0 2.5rem;
   position: relative;
   background:
-    radial-gradient(ellipse at top, hsl(270 100% 25% / 0.08), transparent 60%),
+    radial-gradient(ellipse 85% 40% at 30% 30%, hsl(270 100% 45% / 0.11), hsl(270 100% 45% / 0.044) 45%, hsl(270 100% 45% / 0) 72%),
+    radial-gradient(ellipse 55% 34% at 88% 46%, hsl(200 100% 45% / 0.06), hsl(200 100% 45% / 0.024) 45%, hsl(200 100% 45% / 0) 72%),
     var(--background);
 }
 
