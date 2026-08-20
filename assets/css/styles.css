@@ -96,15 +96,27 @@ h6,
   position: fixed;
   inset: 0 0 auto;
   z-index: 30;
-  transition: 220ms ease;
   padding: 1.25rem 0;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color 220ms ease,
+    border-bottom-color 220ms ease,
+    padding 220ms ease;
 }
 
 .site-header.scrolled {
-  background: hsl(0 0% 2% / 0.88);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  background: hsl(0 0% 2% / 0.94);
+  border-bottom-color: var(--border);
   padding: 0.85rem 0;
+}
+
+/* backdrop-filter em elemento fixed re-amostra o fundo a cada frame de
+   scroll - no mobile o custo nao compensa, ali o fundo quase opaco basta. */
+@media (min-width: 768px) {
+  .site-header.scrolled {
+    background: hsl(0 0% 2% / 0.88);
+    backdrop-filter: blur(8px);
+  }
 }
 
 .header-inner {
@@ -235,37 +247,62 @@ h6,
     var(--background);
 }
 
+/* Gradiente radial no lugar de filter: blur() - o blur precisava ser
+   re-rasterizado a cada frame por causa do transform do float. */
 .orb {
   position: absolute;
-  border-radius: 999px;
-  filter: blur(80px);
-  animation: float 6s ease-in-out infinite;
   pointer-events: none;
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
 }
 
 .orb-purple {
-  width: 16rem;
-  height: 16rem;
+  width: 34rem;
+  height: 34rem;
+  margin: -9rem 0 0 -9rem;
   top: 18%;
   left: 12%;
-  background: hsl(270 100% 75% / 0.18);
+  background: radial-gradient(
+    circle closest-side,
+    hsl(270 100% 75% / 0.155) 0%,
+    hsl(270 100% 75% / 0.12) 26%,
+    hsl(270 100% 75% / 0.068) 47%,
+    hsl(270 100% 75% / 0.025) 68%,
+    hsl(270 100% 75% / 0) 84%
+  );
 }
 
 .orb-blue {
-  width: 20rem;
-  height: 20rem;
+  width: 40rem;
+  height: 40rem;
+  margin: 0 -10rem -10rem 0;
   bottom: 18%;
   right: 12%;
-  background: hsl(200 100% 60% / 0.14);
+  background: radial-gradient(
+    circle closest-side,
+    hsl(200 100% 60% / 0.125) 0%,
+    hsl(200 100% 60% / 0.10) 26%,
+    hsl(200 100% 60% / 0.056) 47%,
+    hsl(200 100% 60% / 0.021) 68%,
+    hsl(200 100% 60% / 0) 84%
+  );
   animation: float-alt 8s ease-in-out infinite;
 }
 
 .orb-green {
-  width: 12rem;
-  height: 12rem;
+  width: 28rem;
+  height: 28rem;
+  margin: -8rem 0 0 -8rem;
   top: 55%;
   left: 45%;
-  background: hsl(145 100% 55% / 0.08);
+  background: radial-gradient(
+    circle closest-side,
+    hsl(145 100% 55% / 0.072) 0%,
+    hsl(145 100% 55% / 0.056) 26%,
+    hsl(145 100% 55% / 0.032) 47%,
+    hsl(145 100% 55% / 0.012) 68%,
+    hsl(145 100% 55% / 0) 84%
+  );
   animation: float 9s ease-in-out infinite reverse;
 }
 
@@ -277,10 +314,9 @@ h6,
     180deg,
     transparent 0,
     transparent 3px,
-    hsl(0 0% 100% / 0.012) 3px,
-    hsl(0 0% 100% / 0.012) 4px
+    hsl(0 0% 100% / 0.01) 3px,
+    hsl(0 0% 100% / 0.01) 4px
   );
-  mix-blend-mode: overlay;
 }
 
 .hero-content {
@@ -871,8 +907,7 @@ h6,
   grid-template-columns: repeat(3, 1fr);
   padding: 7px 13px 10px;
   border-top: 1px solid hsl(0 0% 100% / 0.065);
-  background: hsl(0 0% 3% / 0.83);
-  backdrop-filter: blur(8px);
+  background: hsl(0 0% 3% / 0.95);
 }
 
 .app-bottom-nav > span {
@@ -936,9 +971,9 @@ h6,
   padding: 7px 10px;
   border: 1px solid hsl(0 0% 100% / 0.11);
   border-radius: 999px;
-  background: hsl(0 0% 4% / 0.88);
+  background: hsl(0 0% 4% / 0.96);
   box-shadow: 0 12px 28px hsl(0 0% 0% / 0.48);
-  backdrop-filter: blur(10px);
+  will-change: transform;
   color: hsl(0 0% 76%);
   font-family: var(--font-mono);
   font-size: 0.52rem;
@@ -971,12 +1006,12 @@ h6,
   box-shadow: 0 0 9px hsl(145 100% 55% / 0.7);
 }
 
-/* Scroll indicator */
-.hero-scroll {
+/* Scroll indicator - usado no hero e no fim de cada secao */
+.scroll-cue {
   position: absolute;
-  bottom: 1.8rem;
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 50%);
   z-index: 2;
   display: flex;
   flex-direction: column;
@@ -987,16 +1022,30 @@ h6,
   font-size: 0.7rem;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  opacity: 0;
-  animation: fade-up 0.8s ease both 1.4s;
+  transition: color 0.25s ease;
 }
 
-.hero-scroll-label {
+.scroll-cue:hover,
+.scroll-cue:focus-visible {
+  color: var(--foreground);
+}
+
+/* No hero nao existe "vao": fica ancorado na base da dobra.
+   Keyframe proprio porque o fade-up generico sobrescreve o transform
+   e derrubaria a centralizacao horizontal. */
+.scroll-cue-hero {
+  bottom: 1.8rem;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  animation: fade-up-centered 0.8s ease both 1.4s;
+}
+
+.scroll-cue-label {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
 
-.hero-scroll-line {
+.scroll-cue-line {
   width: 1px;
   height: 38px;
   background: linear-gradient(180deg, transparent, var(--neon-purple));
@@ -1004,7 +1053,7 @@ h6,
   overflow: hidden;
 }
 
-.hero-scroll-line::after {
+.scroll-cue-line::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -1014,8 +1063,13 @@ h6,
 
 /* ── Sections ─────────────────────────────────────────────── */
 .section {
-  padding: 6rem 0;
+  padding: 6rem 0 7rem;
   position: relative;
+}
+
+/* Ultima secao antes do rodape: sem indicador, sem a folga extra. */
+#about {
+  padding-bottom: 6rem;
 }
 
 .section-head {
@@ -1054,6 +1108,15 @@ h6,
   box-shadow: 0 10px 28px hsl(0 0% 0% / 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   backdrop-filter: blur(6px);
+}
+
+/* Sao ~24 glass-cards na pagina; cada backdrop-filter e uma camada composta
+   a mais. No mobile troca por fundo opaco. */
+@media (max-width: 767px) {
+  .glass-card {
+    background: hsl(0 0% 6%);
+    backdrop-filter: none;
+  }
 }
 
 .gradient-border {
@@ -1780,6 +1843,17 @@ h6,
   }
 }
 
+@keyframes fade-up-centered {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
 @keyframes fade-up {
   from {
     opacity: 0;
@@ -1872,6 +1946,7 @@ h6,
   filter: blur(44px);
   transform: translate(-50%, -50%);
   animation: showcase-breathe 7s ease-in-out infinite;
+  will-change: opacity;
 }
 
 .showcase-orbit {
@@ -2368,8 +2443,7 @@ h6,
   grid-template-columns: repeat(4, 1fr);
   padding: 9px 11px 10px;
   border-top: 1px solid hsl(0 0% 100% / 0.065);
-  background: hsl(0 0% 3% / 0.86);
-  backdrop-filter: blur(10px);
+  background: hsl(0 0% 3% / 0.95);
 }
 
 .nova-bottom-nav > span {
@@ -2479,7 +2553,7 @@ h6,
   box-shadow:
     0 18px 38px hsl(0 0% 0% / 0.64),
     inset 0 1px 0 hsl(0 0% 100% / 0.05);
-  backdrop-filter: blur(12px);
+  will-change: transform;
   animation: chip-float 6.5s ease-in-out infinite 0.8s;
 }
 
@@ -2517,14 +2591,13 @@ h6,
   font-size: 0.42rem;
 }
 
+/* So opacity: animar scale forcava o blur(44px) a re-rasterizar por frame. */
 @keyframes showcase-breathe {
   0%, 100% {
-    opacity: 0.72;
-    transform: translate(-50%, -50%) scale(0.96);
+    opacity: 0.62;
   }
   50% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.05);
   }
 }
 
@@ -2751,8 +2824,12 @@ h6,
     line-height: 1.35;
   }
 
-  .hero-scroll {
+  .scroll-cue {
     display: none;
+  }
+
+  .section {
+    padding: 6rem 0;
   }
 }
 

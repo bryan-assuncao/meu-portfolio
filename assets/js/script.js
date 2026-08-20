@@ -37,6 +37,35 @@ const updateHeaderState = () => {
   siteHeader.classList.toggle('scrolled', window.scrollY > 50);
 };
 
+// Uma sentinela observada troca o listener de scroll: o navegador avisa
+// quando cruza o limiar em vez de rodar JS em todo frame de scroll.
+const setupHeaderState = () => {
+  if (!siteHeader) {
+    return;
+  }
+
+  if (!('IntersectionObserver' in window)) {
+    window.addEventListener('scroll', updateHeaderState, { passive: true });
+    updateHeaderState();
+    return;
+  }
+
+  const sentinel = document.createElement('div');
+  sentinel.setAttribute('aria-hidden', 'true');
+  sentinel.style.cssText =
+    'position:absolute;top:0;left:0;width:1px;height:50px;pointer-events:none;visibility:hidden;';
+  document.body.prepend(sentinel);
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      siteHeader.classList.toggle('scrolled', !entry.isIntersecting);
+    },
+    { threshold: 0 },
+  );
+
+  observer.observe(sentinel);
+};
+
 const setupProfileImageFallback = () => {
   if (!profileImage) {
     return;
@@ -140,7 +169,6 @@ if (currentYear) {
   currentYear.textContent = String(new Date().getFullYear());
 }
 
-window.addEventListener('scroll', updateHeaderState, { passive: true });
-updateHeaderState();
+setupHeaderState();
 setupProfileImageFallback();
 setupRevealAnimations();
