@@ -3024,22 +3024,34 @@ h6,
 }
 
 .project-actions {
-  margin-top: 1.3rem;
+  /* padding + margem negativa: dá espaço para o lift e o glow do hover
+     sem que o scroll container corte os botões, e sem alterar o layout */
+  margin: calc(1.3rem - 24px) -20px -24px;
+  padding: 24px 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.65rem;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.project-actions::-webkit-scrollbar {
+  display: none;
 }
 
 .project-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  gap: 0.42rem;
   border: 1px solid var(--border);
-  border-radius: 0.7rem;
-  padding: 0.65rem 1.05rem;
+  border-radius: 0.6rem;
+  padding: 0.5rem 0.8rem;
   font-family: var(--font-mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.06em;
+  font-size: 0.64rem;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--muted-foreground);
   background: hsl(0 0% 8% / 0.6);
@@ -3047,8 +3059,8 @@ h6,
 }
 
 .project-link svg {
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
 }
 
 .project-link:hover {
@@ -3066,6 +3078,35 @@ h6,
 .project-link-primary:hover {
   border-color: hsl(270 100% 75% / 0.8);
   box-shadow: 0 0 20px hsl(270 100% 75% / 0.28), 0 0 40px hsl(200 100% 60% / 0.16);
+}
+
+.project-link-download {
+  color: var(--foreground);
+  border-color: hsl(200 100% 60% / 0.4);
+  background: hsl(200 100% 60% / 0.08);
+}
+
+.project-link-download:hover {
+  border-color: hsl(200 100% 60% / 0.75);
+  box-shadow: 0 0 18px hsl(200 100% 60% / 0.22);
+}
+
+@media (max-width: 767px) {
+  .project-actions {
+    gap: 0.4rem;
+  }
+
+  .project-link {
+    gap: 0.35rem;
+    padding: 0.45rem 0.6rem;
+    font-size: 0.58rem;
+    letter-spacing: 0.02em;
+  }
+
+  .project-link svg {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .project-note {
