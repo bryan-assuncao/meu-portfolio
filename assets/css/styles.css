@@ -352,6 +352,19 @@ h6,
   letter-spacing: -0.025em;
 }
 
+.hero-line {
+  display: block;
+  margin-bottom: 0.25em;
+}
+
+.hero-line:last-child {
+  margin-bottom: 0;
+}
+
+.hero-line--scaled {
+  font-size: 0.94em;
+}
+
 .gradient-text {
   background: linear-gradient(90deg, #ff2d55 0%, #ff8a00 16%, #ffe600 32%, #00ff85 48%, #00d4ff 64%, #7a5cff 80%, #ff2d55 100%);
   background-size: 300% 100%;
