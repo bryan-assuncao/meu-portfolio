@@ -1,0 +1,29 @@
+# Bryan Assunção — Full Stack & Mobile Developer
+
+> Desenvolvedor Full Stack & Mobile baseado em Porto Alegre, RS, Brasil. Trabalha com React Native, Node.js, TypeScript, Python, Firebase, AWS e GCP. Experiência com IA (LLMs, RAG, agentes inteligentes) e automação (N8N).
+
+## Experiência Profissional
+
+- [Blix — Full Stack & Mobile Developer](https://bryanassuncao.dev/#experience): Desenvolvimento de apps iOS/Android com React Native, APIs com Node.js, automações com N8N, integração Firebase, AWS e GCP. (Nov 2025 — Presente)
+- [Safeweb — AI Intern](https://bryanassuncao.dev/#experience): Agentes inteligentes, LLMs, RAG, chatbots com Ollama, APIs com Flask, microsserviços em Python. (Mar–Nov 2025)
+
+## Projetos
+
+- [Fluxo](https://fluxo.web.app): Sistema de gestão para empresas de comunicação visual — OS, produção Kanban, financeiro, app mobile. React 19, TypeScript, Vite, React Native, Expo, Firebase.
+- [Repositório Fluxo no GitHub](https://github.com/bryan-assuncao/fluxo-showcase): Código-fonte e showcase do projeto Fluxo.
+
+## Tech Stack
+
+- Frontend & Mobile: React Native, React 19, Expo, TypeScript, JavaScript
+- Backend: Node.js, Python, Flask
+- Cloud & Infra: Firebase (Auth, Firestore, Cloud Functions), AWS, GCP, Supabase
+- Automação & IA: N8N, LLMs, RAG, Ollama, LlamaIndex, Hugging Face
+- Ferramentas: Git, Vite, Pandas
+
+## Contato
+
+- [LinkedIn](https://linkedin.com/in/devbryan/)
+- [GitHub](https://github.com/bryan-assuncao)
+- [Email](mailto:bryan.assuncao.dev@gmail.com)
+- [WhatsApp](https://wa.me/5551991924156)
+- [Site](https://bryanassuncao.dev)
