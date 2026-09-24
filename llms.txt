@@ -13,6 +13,7 @@
 - [Repositório Fluxo no GitHub](https://github.com/bryan-assuncao/fluxo-showcase): Código-fonte e showcase do projeto Fluxo.
 - [Pluno](https://nubi-kohl.vercel.app): App de finanças pessoais — resumo do mês, parcelas automáticas, faturas de cartão, limites, espaços compartilhados e uso sem cadastro. React Native, Expo, TypeScript, Supabase, PostgreSQL, TanStack Query.
 - [Repositório Pluno no GitHub](https://github.com/bryan-assuncao/pluno-showcase): Showcase do projeto Pluno.
+- [Assistente ICP-Brasil](https://github.com/bryan-assuncao/chatbot-local-icpbrasil): Chatbot de perguntas e respostas sobre documentos da ICP-Brasil com RAG e LLM local. Python, LlamaIndex, Ollama (Gemma), ChromaDB, Hugging Face Embeddings.
 
 ## Tech Stack
 

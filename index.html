@@ -79,7 +79,7 @@
           "@id": "https://bryanassuncao.dev/#projects",
           "name": "Projetos do Portfolio",
           "description": "Produtos reais, do primeiro commit ao deploy em produção.",
-          "numberOfItems": 2,
+          "numberOfItems": 3,
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -113,6 +113,20 @@
                 "codeRepository": "https://github.com/bryan-assuncao/pluno-showcase",
                 "programmingLanguage": ["TypeScript"],
                 "runtimePlatform": ["React Native", "Expo", "Supabase", "PostgreSQL", "TanStack Query"]
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "SoftwareSourceCode",
+                "@id": "https://bryanassuncao.dev/#chatbot-icpbrasil",
+                "name": "Assistente ICP-Brasil",
+                "description": "Assistente de perguntas e respostas sobre documentos da ICP-Brasil usando RAG com LLM local: embeddings multilíngues, índice vetorial persistente no ChromaDB e respostas do Gemma via Ollama, baseadas estritamente nos textos fornecidos.",
+                "author": { "@id": "https://bryanassuncao.dev/#person" },
+                "codeRepository": "https://github.com/bryan-assuncao/chatbot-local-icpbrasil",
+                "programmingLanguage": ["Python"],
+                "runtimePlatform": ["LlamaIndex", "Ollama", "ChromaDB", "Hugging Face"]
               }
             }
           ]
@@ -437,11 +451,12 @@
               </div>
 
               <div class="project-content">
-                <span class="project-kicker">Gestão empresarial · Web &amp; Mobile</span>
+                <span class="project-kicker">Sistema de gestão · Web &amp; App mobile</span>
                 <h3>Fluxo</h3>
                 <p class="project-description">
-                  Da ordem de serviço ao financeiro, tudo no mesmo fluxo — gestão completa para
-                  empresas de comunicação visual.
+                  Sistema web e app mobile em React Native para empresas de comunicação visual:
+                  ordens de serviço com PDF, produção em Kanban e financeiro, tudo sincronizado em
+                  tempo real com Firebase.
                 </p>
 
                 <div class="tags">
@@ -496,11 +511,12 @@
               </div>
 
               <div class="project-content">
-                <span class="project-kicker">Finanças pessoais · Mobile &amp; Web</span>
+                <span class="project-kicker">Finanças pessoais · App mobile &amp; PWA</span>
                 <h3>Pluno</h3>
                 <p class="project-description">
-                  O mês inteiro em uma tela: o que entrou, o que saiu e o que já está comprometido
-                  nos próximos meses.
+                  App de finanças pessoais em React Native para Android, iOS e web, com backend
+                  Supabase. Controla gastos, parcelas e faturas de cartão, e mostra o que já está
+                  comprometido nos próximos meses.
                 </p>
 
                 <div class="tags">
@@ -527,6 +543,59 @@
 
                 <p class="project-note">
                   Sem cadastro: <code>Continuar sem conta</code>
+                </p>
+              </div>
+            </article>
+
+            <article class="glass-card gradient-border project-card">
+              <div class="project-stage project-stage-icp">
+                <div class="project-preview-glow" aria-hidden="true"></div>
+
+                <div
+                  class="terminal-mock"
+                  role="img"
+                  aria-label="Terminal do assistente ICP-Brasil respondendo uma pergunta com base nos documentos indexados"
+                >
+                  <div class="browser-bar" aria-hidden="true">
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-url">python main.py</span>
+                  </div>
+                  <div class="terminal-body" aria-hidden="true">
+                    <p class="terminal-dim">✓ Índice carregado (ChromaDB)</p>
+                    <p class="terminal-dim">✓ LLM local: gemma3:12b via Ollama</p>
+                    <p><span class="terminal-prompt">Pergunta:</span> Qual a validade de um certificado A3?</p>
+                    <p><span class="terminal-answer">Resposta:</span> Até 5 anos, conforme o <span class="terminal-nowrap">DOC-ICP-04.</span><span class="terminal-cursor"></span></p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="project-content">
+                <span class="project-kicker">IA generativa · Chatbot com LLM local</span>
+                <h3>Assistente ICP-Brasil</h3>
+                <p class="project-description">
+                  Chatbot com IA que responde perguntas sobre as normas da ICP-Brasil. Usa RAG para
+                  buscar os trechos certos nos PDFs e um LLM (Gemma) rodando localmente via Ollama,
+                  sem enviar dados para fora.
+                </p>
+
+                <div class="tags">
+                  <span>Python</span><span>LlamaIndex</span><span>Ollama</span><span>ChromaDB</span>
+                </div>
+
+                <div class="project-actions">
+                  <a class="project-link" href="https://github.com/bryan-assuncao/chatbot-local-icpbrasil" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3.2-.4 6.5-1.6 6.5-7.3A5.6 5.6 0 0 0 19 3.8 5.2 5.2 0 0 0 18.9 1S17.7.6 15 2.5a13.4 13.4 0 0 0-6 0C6.3.6 5.1 1 5.1 1A5.2 5.2 0 0 0 5 3.8 5.6 5.6 0 0 0 3.5 7.5c0 5.7 3.3 6.9 6.5 7.3a4.8 4.8 0 0 0-1 3.2v4"></path>
+                      <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                    </svg>
+                    Código
+                  </a>
+                </div>
+
+                <p class="project-note">
+                  Modelos: <code>gemma3:12b</code> · <code>multilingual-e5-large</code>
                 </p>
               </div>
             </article>

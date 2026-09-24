@@ -67,6 +67,22 @@ Funcionalidades:
 
 Tecnologias: React Native, Expo, TypeScript, Supabase, PostgreSQL, TanStack Query, Zustand
 
+### Assistente ICP-Brasil — RAG com LLM Local
+
+**Repositório: https://github.com/bryan-assuncao/chatbot-local-icpbrasil**
+
+Sistema de perguntas e respostas especializado em documentos da Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil). O usuário pergunta em linguagem natural e recebe respostas objetivas, baseadas estritamente no conteúdo dos PDFs indexados — com o modelo rodando localmente, garantindo privacidade e controle.
+
+Funcionalidades:
+- Ingestão de PDFs com divisão em chunks (SentenceSplitter)
+- Embeddings multilíngues com intfloat/multilingual-e5-large (Hugging Face)
+- Índice vetorial persistente no ChromaDB, sem reprocessar documentos a cada execução
+- LLM local Gemma (gemma3:12b) via Ollama
+- Prompt customizado para responder apenas com base no contexto recuperado
+- Interface interativa de console
+
+Tecnologias: Python, LlamaIndex, Ollama, Gemma, ChromaDB, Hugging Face, Sentence Transformers
+
 ---
 
 ## Tech Stack Completa
