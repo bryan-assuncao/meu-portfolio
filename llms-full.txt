@@ -36,7 +36,6 @@ Tecnologias: Python, Flask, SQL Server, LLMs, RAG, Ollama, N8N, Pandas
 
 ### Fluxo — Sistema de Gestão para Comunicação Visual
 
-**Status: Em produção**
 **URL: https://fluxo.web.app**
 **Repositório: https://github.com/bryan-assuncao/fluxo-showcase**
 
@@ -50,6 +49,23 @@ Funcionalidades:
 - Arquitetura multitenant com dados isolados e autenticação por empresa
 
 Tecnologias: React 19, TypeScript, Vite, React Native, Expo, Firebase
+
+### Pluno — Finanças Pessoais
+
+**URL: https://nubi-kohl.vercel.app**
+**Repositório: https://github.com/bryan-assuncao/pluno-showcase**
+
+O mês inteiro em uma tela: o que entrou, o que saiu e o que já está comprometido. App de finanças pessoais para registrar uma compra em segundos, com os detalhes que importam — cartão, forma de pagamento, local e data — sem planilhas e sem transformar cada gasto em uma tarefa.
+
+Funcionalidades:
+- Compras parceladas distribuídas automaticamente nos meses seguintes
+- Resumo do mês com entradas, gastos e sobra, separando Pix e cada cartão
+- Faturas organizadas por vencimento, com compras e confirmação de pagamento
+- Limites por cartão ou categoria e visão dos próximos seis meses comprometidos
+- Espaços compartilhados por e-mail e modo offline sem cadastro, com migração para a nuvem
+- Uma única base de código para Android, iOS e web (PWA)
+
+Tecnologias: React Native, Expo, TypeScript, Supabase, PostgreSQL, TanStack Query, Zustand
 
 ---
 

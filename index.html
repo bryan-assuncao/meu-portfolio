@@ -79,7 +79,7 @@
           "@id": "https://bryanassuncao.dev/#projects",
           "name": "Projetos do Portfolio",
           "description": "Produtos reais, do primeiro commit ao deploy em produção.",
-          "numberOfItems": 1,
+          "numberOfItems": 2,
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -96,6 +96,23 @@
                 "codeRepository": "https://github.com/bryan-assuncao/fluxo-showcase",
                 "programmingLanguage": ["TypeScript", "JavaScript"],
                 "runtimePlatform": ["React 19", "React Native", "Expo", "Firebase", "Vite"]
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "SoftwareApplication",
+                "@id": "https://bryanassuncao.dev/#pluno",
+                "name": "Pluno",
+                "url": "https://nubi-kohl.vercel.app",
+                "description": "App de finanças pessoais: o mês inteiro em uma tela — o que entrou, o que saiu e o que já está comprometido. Parcelas automáticas, faturas de cartão, limites por categoria, espaços compartilhados e uso offline sem cadastro.",
+                "applicationCategory": "FinanceApplication",
+                "operatingSystem": "Web, iOS, Android",
+                "author": { "@id": "https://bryanassuncao.dev/#person" },
+                "codeRepository": "https://github.com/bryan-assuncao/pluno-showcase",
+                "programmingLanguage": ["TypeScript"],
+                "runtimePlatform": ["React Native", "Expo", "Supabase", "PostgreSQL", "TanStack Query"]
               }
             }
           ]
@@ -386,8 +403,8 @@
           </div>
 
           <div class="projects-grid">
-            <article class="glass-card gradient-border project-card project-card-featured">
-              <div class="project-preview">
+            <article class="glass-card gradient-border project-card">
+              <div class="project-stage project-stage-fluxo">
                 <div class="project-preview-glow" aria-hidden="true"></div>
 
                 <div class="browser-mock">
@@ -420,30 +437,15 @@
               </div>
 
               <div class="project-content">
-                <div class="project-header">
-                  <h3>Fluxo</h3>
-                  <span class="experience-badge experience-badge-active">
-                    <span class="badge-dot"></span> Em produção
-                  </span>
-                </div>
-                <p class="project-tagline">Da ordem de serviço ao financeiro, tudo no mesmo fluxo.</p>
-
+                <span class="project-kicker">Gestão empresarial · Web &amp; Mobile</span>
+                <h3>Fluxo</h3>
                 <p class="project-description">
-                  Sistema de gestão para empresas de comunicação visual. Centraliza vendas, produção,
-                  clientes e financeiro em um único lugar, substituindo planilhas e controles espalhados
-                  por um fluxo de trabalho conectado e atualizado em tempo real.
+                  Da ordem de serviço ao financeiro, tudo no mesmo fluxo — gestão completa para
+                  empresas de comunicação visual.
                 </p>
 
-                <ul class="experience-list project-list">
-                  <li>Ordens de serviço com cálculo automático de valores, prazos e geração de PDF</li>
-                  <li>Linha de produção estilo Kanban com etapas personalizadas e alertas de atraso</li>
-                  <li>Financeiro com contas a receber, inadimplência e projeção mensal</li>
-                  <li>App mobile em React Native sincronizado em tempo real com o painel web</li>
-                  <li>Arquitetura multitenant com dados isolados e autenticação por empresa</li>
-                </ul>
-
                 <div class="tags">
-                  <span>React 19</span><span>TypeScript</span><span>Vite</span><span>React Native</span><span>Expo</span><span>Firebase</span>
+                  <span>React 19</span><span>React Native</span><span>TypeScript</span><span>Firebase</span>
                 </div>
 
                 <div class="project-actions">
@@ -453,7 +455,7 @@
                       <path d="M2 12h20"></path>
                       <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
                     </svg>
-                    Ver demonstração
+                    Demo
                   </a>
                   <a class="project-link project-link-download" href="https://drive.google.com/file/d/1dPtCzoeGLx6bnFy84FViZ9FTgyd3-jNX/view" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -461,20 +463,70 @@
                       <path d="M7 10l5 5 5-5"></path>
                       <path d="M12 15V3"></path>
                     </svg>
-                    Download App
+                    App
                   </a>
                   <a class="project-link" href="https://github.com/bryan-assuncao/fluxo-showcase" target="_blank" rel="noopener noreferrer">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3.2-.4 6.5-1.6 6.5-7.3A5.6 5.6 0 0 0 19 3.8 5.2 5.2 0 0 0 18.9 1S17.7.6 15 2.5a13.4 13.4 0 0 0-6 0C6.3.6 5.1 1 5.1 1A5.2 5.2 0 0 0 5 3.8 5.6 5.6 0 0 0 3.5 7.5c0 5.7 3.3 6.9 6.5 7.3a4.8 4.8 0 0 0-1 3.2v4"></path>
                       <path d="M9 18c-4.51 2-5-2-7-2"></path>
                     </svg>
-                    Repositório
+                    Código
                   </a>
                 </div>
 
                 <p class="project-note">
-                  <span class="badge-dot"></span>
-                  Acesso de teste: <code>teste@teste.com</code> · <code>contatest*</code>
+                  Teste: <code>teste@teste.com</code> · <code>contatest*</code>
+                </p>
+              </div>
+            </article>
+
+            <article class="glass-card gradient-border project-card">
+              <div class="project-stage project-stage-pluno">
+                <div class="project-preview-glow" aria-hidden="true"></div>
+
+                <img
+                  class="project-phones-shot"
+                  src="./assets/img/pluno-telas.webp"
+                  width="1100"
+                  height="880"
+                  loading="lazy"
+                  decoding="async"
+                  alt="Três telas do Pluno: lançamentos do mês, resumo com sobra, Pix e cartões, e pagamentos de faturas"
+                />
+              </div>
+
+              <div class="project-content">
+                <span class="project-kicker">Finanças pessoais · Mobile &amp; Web</span>
+                <h3>Pluno</h3>
+                <p class="project-description">
+                  O mês inteiro em uma tela: o que entrou, o que saiu e o que já está comprometido
+                  nos próximos meses.
+                </p>
+
+                <div class="tags">
+                  <span>React Native</span><span>Expo</span><span>TypeScript</span><span>Supabase</span>
+                </div>
+
+                <div class="project-actions">
+                  <a class="project-link project-link-primary" href="https://nubi-kohl.vercel.app" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <path d="M2 12h20"></path>
+                      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                    </svg>
+                    Abrir
+                  </a>
+                  <a class="project-link" href="https://github.com/bryan-assuncao/pluno-showcase" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3.2-.4 6.5-1.6 6.5-7.3A5.6 5.6 0 0 0 19 3.8 5.2 5.2 0 0 0 18.9 1S17.7.6 15 2.5a13.4 13.4 0 0 0-6 0C6.3.6 5.1 1 5.1 1A5.2 5.2 0 0 0 5 3.8 5.6 5.6 0 0 0 3.5 7.5c0 5.7 3.3 6.9 6.5 7.3a4.8 4.8 0 0 0-1 3.2v4"></path>
+                      <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                    </svg>
+                    Código
+                  </a>
+                </div>
+
+                <p class="project-note">
+                  Sem cadastro: <code>Continuar sem conta</code>
                 </p>
               </div>
             </article>

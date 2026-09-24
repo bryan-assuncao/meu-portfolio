@@ -11,6 +11,8 @@
 
 - [Fluxo](https://fluxo.web.app): Sistema de gestão para empresas de comunicação visual — OS, produção Kanban, financeiro, app mobile. React 19, TypeScript, Vite, React Native, Expo, Firebase.
 - [Repositório Fluxo no GitHub](https://github.com/bryan-assuncao/fluxo-showcase): Código-fonte e showcase do projeto Fluxo.
+- [Pluno](https://nubi-kohl.vercel.app): App de finanças pessoais — resumo do mês, parcelas automáticas, faturas de cartão, limites, espaços compartilhados e uso sem cadastro. React Native, Expo, TypeScript, Supabase, PostgreSQL, TanStack Query.
+- [Repositório Pluno no GitHub](https://github.com/bryan-assuncao/pluno-showcase): Showcase do projeto Pluno.
 
 ## Tech Stack
 
