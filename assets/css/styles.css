@@ -253,25 +253,13 @@ code {
   inset: 0 0 auto;
   z-index: 30;
   padding: 1.1rem 0;
-  border-bottom: 1px solid transparent;
-  transition:
-    background-color 250ms ease,
-    border-color 250ms ease,
-    padding 250ms ease;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  transition: padding 250ms ease;
 }
 
 .site-header.scrolled {
-  background: rgb(10 10 10 / 0.94);
-  border-bottom-color: var(--line);
   padding: 0.7rem 0;
-}
-
-@media (min-width: 768px) {
-  .site-header.scrolled {
-    background: rgb(10 10 10 / 0.75);
-    backdrop-filter: blur(14px) saturate(140%);
-    -webkit-backdrop-filter: blur(14px) saturate(140%);
-  }
 }
 
 .header-inner {
@@ -1868,11 +1856,50 @@ code {
 /* ── Ajustes mobile ───────────────────────────────────────── */
 @media (max-width: 767px) {
   .hero {
-    padding: 7rem 0 6.5rem;
+    padding: 6rem 0 4rem;
   }
 
   .hero-content {
-    gap: 3rem;
+    gap: 2.5rem;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+    gap: 0.6rem;
+    padding: 0.35rem 0.8rem 0.35rem 0.65rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-actions {
+    gap: 0.6rem;
+    margin-top: 2rem;
+  }
+
+  .hero-button,
+  .hero-button-ghost {
+    flex: 1 1 auto;
+    justify-content: center;
+    height: 44px;
+    padding: 0 1.1rem;
+    font-size: 0.875rem;
+  }
+
+  .code-bar {
+    height: 42px;
+  }
+
+  .hero-stat {
+    padding: 0.85rem 1rem;
+  }
+
+  .hero-stat-value {
+    font-size: 1.8rem;
+  }
+
+  .scroll-cue {
+    display: none;
   }
 
   .hero-fade {
@@ -1883,8 +1910,9 @@ code {
 
   .code-body {
     min-height: 0;
-    padding: 1.1rem;
-    font-size: 0.72rem;
+    padding: 1rem;
+    font-size: 0.68rem;
+    line-height: 1.8;
   }
 
   .hero-stat {
@@ -1907,7 +1935,7 @@ code {
   }
 
   .hero h1 {
-    font-size: clamp(2rem, 10.2vw, 3.2rem);
+    font-size: clamp(1.85rem, 8.6vw, 3rem);
   }
 
   .code-body .ln.no-wrap {
@@ -1924,6 +1952,12 @@ code {
 
   .footer-bottom {
     margin-top: 4.5rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero-subtitle-name {
+    display: none;
   }
 }
 
