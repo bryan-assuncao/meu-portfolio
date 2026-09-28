@@ -4,7 +4,7 @@
 
 ## Sobre
 
-Bryan Assunção é um desenvolvedor Full Stack e Mobile que trabalha remotamente a partir de Porto Alegre, RS, Brasil. Gosta de criar soluções que resolvem problemas de verdade e está sempre aprendendo algo novo. Fora do trabalho, curte montar PCs, treinar na academia e acompanhar as novidades do mundo da tecnologia.
+Bryan Assunção é um desenvolvedor Full Stack e Mobile que trabalha remotamente a partir de Porto Alegre, RS, Brasil, focado em construir aplicações escaláveis e performáticas de ponta a ponta com React Native, Node.js, TypeScript, Supabase, Firebase e nuvem. Com bagagem anterior nas áreas financeira e comercial, une rigor técnico a uma forte visão de produto. Gosta de criar soluções que resolvem problemas de verdade e está sempre aprendendo algo novo. Fora do trabalho, curte montar PCs, treinar na academia e acompanhar as novidades do mundo da tecnologia.
 
 - Localização: Porto Alegre, RS, Brasil
 - Atuação: Remoto · Global
@@ -29,6 +29,15 @@ Tecnologias: React Native, Node.js, Firebase, AWS, GCP, N8N, Expo
 Desenvolvimento e implementação de Agentes Inteligentes e LLMs para automação de processos críticos com Python, N8N, Copilot Studio, Power Automate, Ollama, LlamaIndex e Hugging Face. Chatbots inteligentes aplicando técnicas como RAG, LLMs, Embeddings e Chunking com Ollama. Construção de APIs RESTful com Flask para integrar modelos de IA a uma arquitetura de microsserviços. Testes unitários e manipulação de dados com Pandas, garantindo qualidade e performance dos algoritmos.
 
 Tecnologias: Python, Flask, SQL Server, LLMs, RAG, Ollama, N8N, Pandas
+
+---
+
+## Destaques
+
+- Otimizou o carregamento de dados no app principal, eliminando travamentos severos de scroll e reduzindo o tempo de renderização de cerca de 30 segundos para um carregamento fluido e instantâneo.
+- Reduziu em mais de 97% o tempo de setup de infraestrutura (de 2 horas para 3 minutos), automatizando o provisionamento completo de Firebase (Auth, Rules, Firestore, Storage, Remote Config e Hosting).
+- Desenvolveu um agente inteligente omnichannel (WhatsApp) via N8N, com arquitetura RAG, Supabase e base de conhecimento do Confluence, processando texto, imagens e áudios com respostas estritamente contextuais.
+- Resolveu gargalos de regras de negócio integrando Hotmart e Digital Manager Guru, com sincronização precisa de acessos e cancelamentos.
 
 ---
 

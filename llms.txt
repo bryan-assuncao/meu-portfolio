@@ -7,6 +7,13 @@
 - [Blix — Full Stack & Mobile Developer](https://bryanassuncao.dev/#experience): Desenvolvimento de apps iOS/Android com React Native, APIs com Node.js, automações com N8N, integração Firebase, AWS e GCP. (Nov 2025 — Presente)
 - [Safeweb — AI Intern](https://bryanassuncao.dev/#experience): Agentes inteligentes, LLMs, RAG, chatbots com Ollama, APIs com Flask, microsserviços em Python. (Mar–Nov 2025)
 
+## Destaques
+
+- Otimizou o carregamento de dados no app principal, eliminando travamentos severos de scroll e reduzindo o tempo de renderização de cerca de 30 segundos para um carregamento fluido e instantâneo.
+- Reduziu em mais de 97% o tempo de setup de infraestrutura (de 2 horas para 3 minutos), automatizando o provisionamento completo de Firebase (Auth, Rules, Firestore, Storage, Remote Config e Hosting).
+- Desenvolveu um agente inteligente omnichannel (WhatsApp) via N8N, com arquitetura RAG, Supabase e base de conhecimento do Confluence, processando texto, imagens e áudios com respostas estritamente contextuais.
+- Resolveu gargalos de regras de negócio integrando Hotmart e Digital Manager Guru, com sincronização precisa de acessos e cancelamentos.
+
 ## Projetos
 
 - [Fluxo](https://fluxo.web.app): Sistema de gestão para empresas de comunicação visual — OS, produção Kanban, financeiro, app mobile. React 19, TypeScript, Vite, React Native, Expo, Firebase.
