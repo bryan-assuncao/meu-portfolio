@@ -342,10 +342,10 @@ const setupLocalTime = () => {
   setInterval(update, 30_000);
 };
 
-// Campo de pontos do hero: uma onda lenta de fundo e um halo que segue o
-// cursor. Só anima enquanto o hero está visível e a aba está ativa.
-const setupHeroCanvas = () => {
-  const canvas = document.getElementById('heroCanvas');
+// Campo de pontos fixo atrás da página: uma onda lenta de fundo e um halo
+// que segue o cursor. Só anima enquanto a aba está ativa.
+const setupDotCanvas = () => {
+  const canvas = document.getElementById('dotCanvas');
   const ctx = canvas?.getContext('2d');
 
   if (!canvas || !ctx) {
@@ -359,7 +359,6 @@ const setupHeroCanvas = () => {
   let height = 0;
   let dots = [];
   let frameId = 0;
-  let isVisible = true;
 
   const resize = () => {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -416,7 +415,7 @@ const setupHeroCanvas = () => {
   };
 
   const start = () => {
-    if (!frameId && isVisible && !document.hidden) {
+    if (!frameId && !document.hidden) {
       frameId = requestAnimationFrame(loop);
     }
   };
@@ -438,31 +437,25 @@ const setupHeroCanvas = () => {
     return;
   }
 
-  const hero = canvas.parentElement;
+  if (hasFinePointer) {
+    window.addEventListener(
+      'pointermove',
+      (event) => {
+        pointer.targetX = event.clientX;
+        pointer.targetY = event.clientY;
 
-  if (hasFinePointer && hero) {
-    hero.addEventListener('pointermove', (event) => {
-      const rect = canvas.getBoundingClientRect();
-      pointer.targetX = event.clientX - rect.left;
-      pointer.targetY = event.clientY - rect.top;
+        if (pointer.x < -1000) {
+          pointer.x = pointer.targetX;
+          pointer.y = pointer.targetY;
+        }
+      },
+      { passive: true }
+    );
 
-      if (pointer.x < -1000) {
-        pointer.x = pointer.targetX;
-        pointer.y = pointer.targetY;
-      }
-    });
-
-    hero.addEventListener('pointerleave', () => {
+    document.documentElement.addEventListener('pointerleave', () => {
       pointer.targetX = -9999;
       pointer.targetY = -9999;
     });
-  }
-
-  if ('IntersectionObserver' in window) {
-    new IntersectionObserver(([entry]) => {
-      isVisible = entry.isIntersecting;
-      isVisible ? start() : stop();
-    }).observe(canvas);
   }
 
   document.addEventListener('visibilitychange', () => {
@@ -523,4 +516,4 @@ setupSpotlight();
 setupTabs();
 setupCountUp();
 setupLocalTime();
-setupHeroCanvas();
+setupDotCanvas();
