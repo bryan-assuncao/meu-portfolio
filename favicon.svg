@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Logo Bryan">
-  <rect width="64" height="64" rx="16" fill="#0a0a0a" />
-  <path
-    d="M23 16v32M23 16h8.5a8 8 0 0 1 0 16H23M23 32h10.5a8 8 0 0 1 0 16H23"
-    fill="none"
-    stroke="#e9e4d8"
-    stroke-width="5"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bryan — B com ponto laranja"><rect x="5" y="6" width="57" height="57" rx="15" fill="#20170f"/><rect x="2" y="2" width="56" height="56" rx="14" fill="#faf6ec" stroke="#20170f" stroke-width="2"/><text x="11" y="44" font-family="Arial,sans-serif" font-weight="900" font-size="43" fill="#20170f">B</text><circle cx="47" cy="42" r="5" fill="#f04c0c"/></svg>
