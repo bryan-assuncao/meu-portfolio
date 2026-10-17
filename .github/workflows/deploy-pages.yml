@@ -28,7 +28,7 @@ jobs:
         run: |
           mkdir -p _site
           cp index.html _site/
-          cp favicon.svg _site/
+          cp favicon.svg favicon.ico favicon-32.png favicon-96.png _site/
           cp robots.txt _site/
           cp sitemap.xml _site/
           cp -R assets _site/

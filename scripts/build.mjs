@@ -10,6 +10,7 @@ const publicFiles = [
   'index.html',
   'favicon.svg',
   'favicon-32.png',
+  'favicon-96.png',
   'favicon.ico',
   'robots.txt',
   'sitemap.xml',
