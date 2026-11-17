@@ -332,8 +332,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 800; }
   border-radius: 11px;
   box-shadow: 0 20px 35px -25px #000;
 }
-.project-stage-icp .browser-bar { background: #151515; border-color: #292929; }
-.project-stage-icp .browser-url { background: #202020; color: #85857e; }
+/* Barra de janela escura igual em todos os projetos (Fluxo, ICP e sites). */
+.project-stage .browser-bar { background: #151515; border-color: #292929; }
+.project-stage .browser-url { background: #202020; color: #a3a39b; }
 .project-stage-icp .terminal-body { color: #ededeb; font-size: 11px; line-height: 1.75; }
 .project-stage-icp .terminal-dim { color: #85857e; }
 .project-stage-icp .terminal-prompt { color: #facc15; }
@@ -410,35 +411,18 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 800; }
   .back-to-top { display: inline-block; transition: translate 220ms var(--ease), color 220ms ease; }
   .back-to-top:hover { translate: 0 -4px; }
 }
-/* Sites institucionais: bloco compacto abaixo dos projetos. */
+/* Sites institucionais: mesmos cards dos projetos, abaixo deles. */
 .sites-block { margin-top: 44px; }
-.sites-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-bottom: 18px; }
+.sites-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-bottom: 20px; }
 .sites-head h3 { font-size: clamp(22px, 2.2vw, 28px); font-weight: 900; letter-spacing: -.03em; }
 .sites-head p { color: var(--text-dim); font-size: 14px; }
-.sites-grid { display: grid; grid-template-columns: 1fr; gap: 22px; }
-.site-card { display: flex; flex-direction: column; overflow: hidden; color: var(--text); text-decoration: none; background: var(--surface); border: 2px solid var(--text); border-radius: 22px; box-shadow: 5px 6px 0 var(--text); }
-.site-card:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
-.site-shot { align-self: stretch; display: flex; flex-direction: column; background: #151515; border-bottom: 2px solid var(--text); min-height: 0; }
-.site-shot .browser-bar { flex-shrink: 0; border-color: #292929; }
-.site-shot .browser-url { background: #202020; color: #85857e; }
-.site-shot img { display: block; width: 100%; aspect-ratio: 16 / 7; height: auto; object-fit: cover; object-position: top left; }
-.site-info { flex: 1; display: flex; flex-direction: column; min-width: 0; padding: 16px 18px 18px; }
-.site-kicker { color: #493a2e; font-size: 11px; font-weight: 700; letter-spacing: .02em; text-transform: uppercase; }
-.site-info h4 { margin-top: 4px; font-family: var(--font-display); font-size: 22px; font-weight: 800; letter-spacing: -.02em; }
-.site-info p { margin-top: 6px; color: var(--text-muted); font-size: 14px; line-height: 1.55; }
-.site-info .tags { margin-top: 12px; gap: 5px; }
-.site-info .tags span { padding: 4px 7px; font-size: 11px; }
-.site-visit { margin-top: auto; padding-top: 14px; font-size: 13px; font-weight: 800; color: var(--accent); }
-@media (min-width: 760px) {
-  .sites-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
+.project-stage-site { display: grid; place-items: center; padding: 0 7%; }
+.project-stage-site .browser-mock { width: 100%; border: 2px solid var(--text); box-shadow: 4px 5px 0 var(--text); transition: transform 700ms var(--ease); }
+.project-stage-site .browser-shot { aspect-ratio: 12 / 5; object-fit: cover; object-position: top left; }
+.project-stage-noxa { background: #ecd476; }
+.project-stage-kapiva { background: #e4dfd0; }
+.project-stage-af { background: #ecd476; }
 @media (min-width: 1100px) {
   .sites-block { margin-top: 36px; }
-  .sites-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-}
-@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
-  .site-card { transition: translate 280ms var(--ease), box-shadow 280ms var(--ease); }
-  .site-card:hover { translate: 0 -5px; box-shadow: 8px 10px 0 var(--text); }
-  .site-visit span { display: inline-block; transition: translate 220ms var(--ease); }
-  .site-card:hover .site-visit span { translate: 2px -2px; }
+  .project-stage-site { padding: 0 8%; }
 }
