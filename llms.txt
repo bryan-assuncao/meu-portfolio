@@ -22,6 +22,12 @@
 - [Repositório Pluno no GitHub](https://github.com/bryan-assuncao/pluno-showcase): Showcase do projeto Pluno.
 - [Assistente ICP-Brasil](https://github.com/bryan-assuncao/chatbot-local-icpbrasil): Chatbot de perguntas e respostas sobre documentos da ICP-Brasil com RAG e LLM local. Python, LlamaIndex, Ollama (Gemma), ChromaDB, Hugging Face Embeddings.
 
+## Sites institucionais
+
+- [Noxa](https://noxatecnologia.tech): Site da agência digital Noxa — serviços, pacotes e contato pelo WhatsApp. HTML, CSS, JavaScript.
+- [Kapiva.ai](https://kapiva.ai): Site institucional da plataforma educacional com IA Kapiva.ai. WordPress, Elementor.
+- [Alexandra Frantz Consultoria](https://www.alexandrafrantzconsultoria.com.br/): Site da consultoria em legislação e segurança dos alimentos. Hostinger Website Builder.
+
 ## Tech Stack
 
 - Frontend & Mobile: React Native, React 19, Expo, TypeScript, JavaScript
